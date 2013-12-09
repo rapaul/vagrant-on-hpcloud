@@ -1,5 +1,10 @@
 # Set up
 
+Install:
+
+ * [Vagrant](http://www.vagrantup.com/)
+ * `vagrant plugin install vagrant-openstack-plugin` [OpenStack plugin](https://github.com/cloudbau/vagrant-openstack-plugin)
+
 The following environment variables need to be exported:
 
     export OS_AUTH_URL="https://region-a.geo-1.identity.hpcloudsvc.com:35357/v2.0/"
