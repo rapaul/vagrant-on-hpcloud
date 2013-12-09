@@ -27,5 +27,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     hostname = `hostname`.chomp
     os.server_name = "#{hostname}-vagrant"
+
+    # Workaround until Vagrant 1.4 is released - https://github.com/mitchellh/vagrant/issues/1482
+    os.user_data = File.read('user-data.txt')
   end
 end

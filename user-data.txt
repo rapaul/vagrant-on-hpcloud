@@ -1,0 +1,3 @@
+#cloud-config
+runcmd:
+  - echo 'Defaults:root !requiretty' > /etc/sudoers.d/888-vagrant-cloud-init-requiretty && chmod 440 /etc/sudoers.d/888-vagrant-cloud-init-requiretty
