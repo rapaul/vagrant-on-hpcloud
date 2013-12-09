@@ -14,5 +14,5 @@ All of these, with the exception of `OS_KEYPAIR_NAME` are the standard environme
 
     $ vagrant up --provider=openstack
     $ vagrant ssh
-    $ vagrant destory (permanent)
+    $ vagrant destroy (permanent)
     $ vagrant help
