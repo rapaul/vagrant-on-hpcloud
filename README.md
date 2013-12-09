@@ -10,6 +10,8 @@ The following environment variables need to be exported:
 
 All of these, with the exception of `OS_KEYPAIR_NAME` are the standard environment variables used by the [OpenStack CLI](https://github.com/openstack/python-openstackclient).
 
+You'll need to ensure you have the private key (pem file) you created the keypair with stored in `~/.ssh/hpcloud/my-team-keypair`.
+
 # Running
 
     $ vagrant up --provider=openstack
