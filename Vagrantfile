@@ -11,11 +11,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider :openstack do |os|
     os.username = ENV['OS_USERNAME']
     os.api_key  = ENV['OS_PASSWORD']
-    os.flavor   = /ocd/
-    os.image    = /centos/
-    os.endpoint = 'http://ocd-devstack:35357/v2.0/tokens'
-    os.tenant   = 'demo'
+    os.tenant   = ENV['OS_TENANT_NAME']
+    os.endpoint = 'https://region-a.geo-1.identity.hpcloudsvc.com:35357/v2.0/tokens'
 
-    os.server_name = 'rp-test-vagrant'
+    os.flavor   = 'standard.small'
+    os.image    = '78265'
+
+    hostname = `hostname`.chomp
+    os.server_name = "#{hostname}-vagrant"
   end
 end
