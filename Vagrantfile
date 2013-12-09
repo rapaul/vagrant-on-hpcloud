@@ -31,4 +31,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # Workaround until Vagrant 1.4 is released - https://github.com/mitchellh/vagrant/issues/1482
     os.user_data = File.read('user-data.txt')
   end
+
+  config.vm.provision 'shell', path: 'install_puppet.sh'
+  config.vm.provision 'puppet'
 end
