@@ -21,7 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     os.ssh_username = 'root'
 
     os.flavor   = 'standard.small'
-    os.image    = '78265'
+    os.image    = '78265' # CentOS 6.3
 
     os.address_id = 'private' # Chooses the 15.x.x.x range 'private IP' over the 10.x.x.x address
 
