@@ -13,7 +13,7 @@ The following environment variables need to be exported:
     export OS_PASSWORD='secret'
     export OS_KEYPAIR_NAME='my-team-keypair'
 
-All of these, with the exception of `OS_KEYPAIR_NAME` are the standard environment variables used by the [OpenStack CLI](https://github.com/openstack/python-openstackclient).
+All of these, with the exception of `OS_KEYPAIR_NAME` are the standard environment variables used by the [OpenStack CLI](https://github.com/openstack/python-novaclient).
 
 You'll need to ensure you have the private key (pem file) you created the keypair with stored in `~/.ssh/hpcloud/my-team-keypair`.
 
